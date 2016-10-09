@@ -1,6 +1,5 @@
 require 'set'
 
-
 class Game 
 
   attr_accessor :living_cells, :candidates

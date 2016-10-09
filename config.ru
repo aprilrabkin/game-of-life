@@ -1,2 +1,2 @@
-require './one_route'
+require './home'
 run Sinatra::Application
