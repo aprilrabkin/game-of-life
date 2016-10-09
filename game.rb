@@ -1,6 +1,6 @@
-require 'set'
-require 'sinatra'
-require 'pry'
+gem 'set'
+gem 'sinatra'
+
 class Game 
 
   attr_accessor :living_cells, :candidates
@@ -94,7 +94,7 @@ class Game
 end
 
 class Server < Sinatra::Base
-  
+
   get '/next_gen' do
     seeds = params["liveCells"].values.map{|a|[a.first.to_i, a.last.to_i]}
     g = Game.new(seeds)
